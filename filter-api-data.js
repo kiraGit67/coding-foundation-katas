@@ -20,9 +20,9 @@ function filterApiData(apiData, mandatoryKeys) {
     }
 
     console.log(comparisonKeys);
-    console.log(comparisonKeys.join("") == mandatoryKeys.join(""));
+    console.log(comparisonKeys.join("") === mandatoryKeys.join(""));
 
-    if (comparisonKeys.join("") == mandatoryKeys.join("")) {
+    if (comparisonKeys.join("") === mandatoryKeys.join("")) {
       resultArray.push(obj);
     }
   }
