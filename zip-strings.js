@@ -8,9 +8,6 @@ function zipStrings(strA, strB) {
   let result;
   let restArray;
 
-  //console.log(strAarray);
-  //console.log(strBarray);
-
   // Add you solution here
   if (strAarray.length === strBarray.length) {
     for (let i = 0; i < strAarray.length; i++) {
