@@ -5,22 +5,30 @@ function filterApiData(apiData, mandatoryKeys) {
   console.log("\n");
   console.log(apiData);
   console.log(mandatoryKeys);
-  console.log(mandatoryKeys.join(""));
 
   for (let obj of apiData) {
     console.log(obj);
     const objKeys = Object.keys(obj);
     console.log(objKeys);
-    console.log(objKeys.join(""));
 
-    if (
-      objKeys.join("") === mandatoryKeys.join("") ||
-      objKeys.includes(mandatoryKeys.join(""))
-    ) {
+    let comparisonKeys = [];
+
+    for (let objKey of objKeys) {
+      if (mandatoryKeys.includes(objKey)) {
+        comparisonKeys.push(objKey);
+      }
+    }
+
+    console.log(comparisonKeys);
+    console.log(comparisonKeys.join("") == mandatoryKeys.join(""));
+
+    if (comparisonKeys.join("") == mandatoryKeys.join("")) {
       resultArray.push(obj);
     }
   }
+
   console.log(resultArray);
+
   return resultArray;
 }
 
